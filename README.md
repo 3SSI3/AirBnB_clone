@@ -4,7 +4,7 @@
 
 ### __CONTENTS__
 
-- [**Description**](#Description)
+- [**Description**](#**Description**)
 - [**Repo Contents**](#FileContents)
 - [**Usage**](#Usage)
 - [**Acknowledgements**](#Acknowledgements)
@@ -23,4 +23,4 @@ In this phase we will be able to:
 
 ## Repo Contents :clipboard:
 ## Usage :wrench:
-## Acknowledge :raised_hands:
+## Acknowledgements :raised_hands:
