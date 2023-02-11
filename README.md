@@ -8,6 +8,7 @@
 - [**Repo Contents**](#FileContents)
 - [**Usage**](#Usage)
 - [**Acknowledgements**](#Acknowledgements)
+- [**Author**](#Author)
 
 
 ## Description :page_facing_up:
@@ -24,3 +25,5 @@ In this phase we will be able to:
 ## Repo Contents :clipboard:
 ## Usage :wrench:
 ## Acknowledgements :raised_hands:
+## Author :black_nib:
+* **_Esther Elisha_** 
