@@ -2,6 +2,7 @@
 """Defines BaseModel classes"""
 from uuid import uuid
 from datetime import datetime
+from models import storage
 
 class BaseModel:
     """This projects BaseModel"""
@@ -11,18 +12,18 @@ class BaseModel:
         *args: not used.
         **kwargs (dict): key or value pairs of attributes.
         """
-        if not kwargs:
-            self.id = str(uuid())
-            self.created_at = datetime.now()
-            self.updated_at = datetime.now()
-        else:
-            time_f = "%Y-%m-%dT%H:%M:%S.%f"
+        time_f = "%Y-%m-%dT%H:%M:%S.%f"
+        self.id = str(uuid())
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
+        
+        if len(kwargs) != 0:
             for key, value in kwargs.items():
                 if key == 'created_at' or key == 'updated_at':
                     value = datetime.strptime(kwargs[key], time_f)
-                if key != '__class__':
-                    setattr(self, key, value)
-    
+        else:
+            models.storage.new(self)
+            
     def __str__(self):
         """Should print [<class name>] (<self.id>) <self.__dict__>"""
         c_name = self.__class__.__name__
