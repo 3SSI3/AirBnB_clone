@@ -20,7 +20,9 @@ class BaseModel:
         if len(kwargs) != 0:
             for key, value in kwargs.items():
                 if key == 'created_at' or key == 'updated_at':
-                    value = datetime.strptime(kwargs[key], time_f)
+                       self.__dict__[key] = datetime.strptime(value, time_f)
+                else:
+                    self.__dict__[key] = value
         else:
             models.storage.new(self)
             
