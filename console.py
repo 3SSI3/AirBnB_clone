@@ -1,16 +1,19 @@
 #!/usr/bin/python3
-"""The HBnB console."""
+"""Module for the entry point of the command interpreter."""
+
 import cmd
-import re
-import json
 from models.base_model import BaseModel
 from models import storage
+import re
+import json
 
 
 class HBNBCommand(cmd.Cmd):
-    """ General Class for HBNBCommand """
-    prompt = '(hbnb) '
-    
+
+    """Class for the command interpreter."""
+
+    prompt = "(hbnb) "
+
     def default(self, line):
         """Catch commands if nothing else matches then."""
         # print("DEF:::", line)
@@ -211,5 +214,6 @@ class HBNBCommand(cmd.Cmd):
                 setattr(storage.all()[key], attribute, value)
                 storage.all()[key].save()
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     HBNBCommand().cmdloop()
